@@ -10,7 +10,7 @@ class Order extends React.Component {
         if (!isAvailable) {
             return <li key={key}>Sorry {fish ? fish.name : 'fish'} is no longer available</li>
         }
-        return <li>
+        return <li key={key}>
             {count} lbs {fish.name}
         </li>;
     }
