@@ -1,6 +1,14 @@
 import React from 'react';
+import PropTypes from "prop-types";
+import * as PropTypeShapes from "./PropTypeShapes";
 
 class EditFishForm extends React.Component {
+    static propTypes = {
+        fish: PropTypes.shape(PropTypeShapes.Fish),
+        index: PropTypes.string,
+        updateFish: PropTypes.func
+    }
+
     handleChange = e => {
         const updatedFish = {
             ...this.props.fish,
@@ -8,8 +16,6 @@ class EditFishForm extends React.Component {
         };
         this.props.updateFish(this.props.index, updatedFish);
     }
-
-
 
     render() {
         return (
