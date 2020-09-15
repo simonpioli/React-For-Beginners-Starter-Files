@@ -7,7 +7,7 @@ import * as PropTypeShapes from "./PropTypeShapes";
 
 class Order extends React.Component {
     static propTypes = {
-        fishes: PropTypes.arrayOf(PropTypes.shape(PropTypeShapes.Fish)),
+        fishes: PropTypes.objectOf(PropTypes.shape(PropTypeShapes.Fish)),
         order: PropTypes.object,
         removeFromOrder: PropTypes.func
     }
